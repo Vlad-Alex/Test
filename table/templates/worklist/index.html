@@ -1,0 +1,11 @@
+{%if all_worklist %}
+
+<ul>
+    {% for worklist in all_worklist%}
+    <li><a href="/table/{{ worklist.id }}/">{{ worklist.Name }}</a></li>
+         {% endfor %}
+</ul>
+<h1>End of table</h1>
+{% else %}
+<h3>No data available</h3>
+{% endif %}
