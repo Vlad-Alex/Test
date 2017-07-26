@@ -1,12 +1,28 @@
 {%if all_worklist %}
+    <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#aaa;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aaa;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aaa;color:#fff;background-color:#f38630;}
+.tg .tg-4p94{color:#656565;text-align:center;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-asi5{color:#34ff34;text-align:center;vertical-align:top}
+.tg .tg-hxtd{background-color:#96fffb;vertical-align:top}
+    </style>
+    <table class="tg">
+  <tr>
+    <th class="tg-4p94">Name</th>
+    <th class="tg-asi5">Country</th>
+    <th class="tg-baqh">Account</th>
+  </tr>
+     {% for worklist in all_worklist%}
+  <tr>
+    <td class="tg-hxtd"><a href="/table/{{ worklist.id }}/">{{ worklist.Name }}</a></td>
+      <td class="tg-hxtd"></td>
+    <td class="tg-hxtd"></td>
+  </tr>
+  {% endfor %}
+</table>
 
-<ul>
-    {% for worklist in all_worklist%}
-    <li><a href="/table/{{ worklist.id }}/">{{ worklist.Name }}</a></li>
-         {% endfor %}
-</ul>
-<h1>End of table</h1>
 {% else %}
 <h3>No data available</h3>
 {% endif %}
-
