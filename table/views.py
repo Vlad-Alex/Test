@@ -5,7 +5,7 @@ from .models import financials_2015
 def index(request):
    #return HttpResponse("<h2>Details for working list customers:</h2>")
     all_worklist = financials_2015.objects.all()
-    template = loader.get_template('worklist/index.html')
+    template = loader.get_template('table/index.html')
     context = {
        'all_worklist': all_worklist,
    }

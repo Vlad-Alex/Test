@@ -6,5 +6,5 @@ urlpatterns = [
        url(r'^$', views.index, name='index'),
        #Worklist/Countries/
     url(r'^(?P<financials_2015_id>[0-9]+)/$',views.detail, name='detail'),
-
+   # url(r'^(?P<Financials2014_id>[0-9]+)/$',views.detail, name='detail'),
 ]

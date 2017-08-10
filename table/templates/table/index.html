@@ -10,15 +10,19 @@
     </style>
     <table class="tg">
   <tr>
-    <th class="tg-4p94">Name</th>
-    <th class="tg-asi5">Country</th>
-    <th class="tg-baqh">Account</th>
+    <th class="tg-4p94">ID</th>
+      <th class="tg-4p94">SAP Account Number</th>
+    <th class="tg-asi5">Entity or Parent</th>
+    <th class="tg-baqh">Parent Name</th>
+      <th class="tg-baqh">Finanncial Year</th>
   </tr>
-     {% for worklist in all_worklist%}
+     {% for financials_2015 in all_worklist %}
   <tr>
-    <td class="tg-hxtd"><a href="/table/{{ financials_2015.id }}/">{{ financials_2015.SAP_ID }}</a></td>
-      <td class="tg-hxtd"></td>
-    <td class="tg-hxtd"></td>
+    <td class="tg-hxtd"><a href="/table/{{ financials_2015.id }}/">{{ financials_2015.id }}</a></td>
+    <td class="tg-hxtd">{{ financials_2015.sap_id }}</td>
+    <td class="tg-hxtd">{{ financials_2015.entity_or_parent }}</td>
+    <td class="tg-hxtd">{{ financials_2015.parent_name }}</td>
+    <td class="tg-hxtd">{{ financials_2015.financial_year }}</td>
   </tr>
   {% endfor %}
 </table>
